@@ -1,0 +1,12 @@
+.logo{
+  width: 75px ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 27px;
+}
+
+.logo-title{
+  font-weight: 700;
+  font-size: 20px;
+}

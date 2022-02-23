@@ -1,0 +1,9 @@
+.main-container{
+  height:812px ;
+  width: 375px;
+  background-color: #202226;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top:16px;
+}
