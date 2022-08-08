@@ -73,7 +73,6 @@ const AddTask = () => {
     $input.value = "";
     $input.focus();
   };
-
   $button.addEventListener("click", handleAddTask);
   $input.addEventListener(
     "keyup",
@@ -97,6 +96,14 @@ const HomeScreen = () => {
     "register-button",
     "Cadastrar tarefa"
   );
+
+  const focusInput = () => {
+    const $input = document.querySelector(".search-input");
+
+    $input.focus();
+  };
+
+  $button.addEventListener("click", focusInput);
 
   $container.appendChild($image);
   $container.appendChild($informativeText);
@@ -163,9 +170,11 @@ const mostrarProgressNaTela = () => {
 
 const ProgressBar = () => {
   const totalTaks = readTasks().length;
-  const totalTasksCompleted = readTasks().filter( (task) => task.completed).length;
+  const totalTasksCompleted = readTasks().filter(
+    (task) => task.completed
+  ).length;
 
-  console.log(readTasks())
+  console.log(readTasks());
   const $wrapper = createElement("div", "wrapper-progress");
   const $concluedWrapper = createElement("div", "wrapper-conclued");
   const $textConclued = createElement("span", "conclued-text", "Concluídas");
